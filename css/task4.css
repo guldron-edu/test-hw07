@@ -1,0 +1,56 @@
+.container {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.item {
+  height: 200px;
+}
+.feature:first-child {
+  background-color: yellow;
+}
+
+.feature:last-child {
+  background-color: green;
+}
+
+.item:not(:nth-child(2)) {
+  background-color: brown;
+}
+
+.item:nth-child(2) {
+  background-color: red;
+}
+
+@media screen and (max-width: 479px) {
+  .features {
+    display: none;
+  }
+  .item {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .feature {
+    display: block;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features {
+    display: flex;
+    height: 400px;
+  }
+  .feature {
+    flex-basis: 50%;
+  }
+  .items {
+    display: flex;
+    height: 200px;
+  }
+  .item {
+    flex-basis: 33.333%;
+  }
+}

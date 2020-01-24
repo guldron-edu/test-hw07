@@ -1,0 +1,49 @@
+.container {
+  font-size: 48px;
+  font-weight: 700;
+  height: 800px;
+}
+
+.content {
+  background-color: yellow;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: green;
+  text-align: center;
+}
+
+@media screen and (max-width: 479px) {
+  .content {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .content {
+    height: 50%;
+  }
+
+  .sidebar {
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+  }
+
+  .content {
+    flex-basis: 80%;
+  }
+
+  .sidebar {
+    flex-basis: 20%;
+  }
+}
